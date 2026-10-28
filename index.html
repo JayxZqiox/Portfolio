@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jay Curayag | Computer Engineer</title>
+<meta name="description" content="Jay Curayag – Computer Engineering student from Bohol building embedded systems, web apps and browser games.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <div>
+    <div class="loader__count"><span id="count">0</span>%</div>
+    <div class="loader__bar"><i id="bar"></i></div>
+  </div>
+</div>
+<div id="progress"></div>
+<div class="cursor"></div><div class="cursor-ring"></div>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top"><i></i>Jay.</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="blob blob--a"></div><div class="blob blob--b"></div>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap hero__inner">
+    <p class="hero__hi fade-late">Hi, I'm</p>
+    <h1 aria-label="Jay Curayag"><span class="line split">Jay</span><span class="line split gl">Curayag</span></h1>
+    <p class="hero__role fade-late">
+      I build
+      <span class="sr">embedded systems, web apps, browser games and circuit boards.</span>
+      <span class="rot" aria-hidden="true">
+        <b class="on">embedded systems</b><b>web apps</b><b>browser games</b><b>circuit boards</b>
+      </span>
+    </p>
+    <p class="hero__blurb fade-late">Computer Engineering student from Bohol, turning ideas into hardware, software and games people actually use.</p>
+    <div class="actions fade-late">
+      <a class="btn btn--solid mag" href="#projects">See my projects</a>
+      <!-- CV lives at files/Jay-Curayag-CV.pdf -->
+      <a class="btn btn--ghost mag" href="files/Jay-Curayag-CV.pdf" download>Download CV</a>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about" aria-label="Scroll to About"></a>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__row">
+    <span>Embedded systems</span><span>Web development</span><span>Game dev</span><span>PCB design</span><span>IT support</span>
+    <span>Embedded systems</span><span>Web development</span><span>Game dev</span><span>PCB design</span><span>IT support</span>
+  </div>
+  <div class="marquee__row">
+    <span>Arduino</span><span>Raspberry Pi</span><span>Python</span><span>JavaScript</span><span>C++</span><span>Java</span><span>Tailwind</span>
+    <span>Arduino</span><span>Raspberry Pi</span><span>Python</span><span>JavaScript</span><span>C++</span><span>Java</span><span>Tailwind</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <h2 class="sec__title">About me</h2>
+    <div class="about">
+      <div>
+        <p class="about__lead words">I like working where hardware meets software, from soldering a board to shipping the app that runs on it.</p>
+        <p class="about__text reveal">I built a point-of-sale system that a local food business still runs on every day, supported users and workstations during my IT support OJT at Sagility, and taught PCB design to fellow students as a seminar facilitator. Right now I'm co-developing a driver drowsiness detection system on a Raspberry Pi 5 for our thesis.</p>
+      </div>
+      <div class="photo reveal" style="--d:.15s">
+        <div class="photo__in">
+          <span class="hint">Add: images/profile/profile.png</span>
+          <img src="images/profile/profile.png" alt="Portrait of Jay Curayag" style="object-position:center 30%" onerror="this.remove()">
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat reveal"><b><span class="count" data-to="240">0</span></b><span>OJT hours in IT support</span></div>
+      <div class="stat reveal" style="--d:.1s"><b><span class="count" data-to="12">0</span></b><span>projects built</span></div>
+      <div class="stat reveal" style="--d:.2s"><b><span class="count" data-to="1">0</span></b><span>client system in daily use</span></div>
+      <div class="stat reveal" style="--d:.3s"><b><span class="count" data-to="6">0</span></b><span>person thesis team</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="sec" id="projects">
+  <div class="wrap">
+    <h2 class="sec__title">Selected work</h2>
+    <div class="featured">
+
+      <article class="project">
+        <div class="tilt reveal">
+          <div class="shot">
+            <span class="badge">Gaming website</span>
+            <!-- Animated mini match. To use a screenshot instead, replace this <svg> with:
+                 <img src="pickle-rush.jpg" alt="Pickle Rush gameplay"> -->
+            <svg class="court" viewBox="0 0 400 250" role="img" aria-label="Animated pickleball rally">
+              <rect class="ln" x="30" y="30" width="340" height="190" rx="4"/>
+              <line class="ln" x1="135" y1="30" x2="135" y2="220"/>
+              <line class="ln" x1="265" y1="30" x2="265" y2="220"/>
+              <line class="ln" x1="30" y1="125" x2="135" y2="125"/>
+              <line class="ln" x1="265" y1="125" x2="370" y2="125"/>
+              <line class="net" x1="200" y1="20" x2="200" y2="230"/>
+              <text class="score" x="170" y="22" text-anchor="end">7</text>
+              <text class="score" x="230" y="22">5</text>
+              <g class="pad pad--l"><rect x="36" y="103" width="12" height="44" rx="6"/></g>
+              <g class="pad pad--r"><rect x="352" y="103" width="12" height="44" rx="6"/></g>
+              <g class="bx"><g class="bl">
+                <ellipse class="shadow" cx="58" cy="132" rx="9" ry="4"/>
+                <g class="by"><circle class="ball" cx="58" cy="125" r="8"/></g>
+              </g></g>
+            </svg>
+          </div>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <h3>Pickle Rush</h3>
+          <p class="what grad">Gaming website</p>
+          <p class="desc">A pickleball game that runs right in the browser. It's built to play smoothly on phones, including iOS, and has online multiplayer so you can rally against friends from anywhere.</p>
+          <p class="role">Designed and built solo, then deployed from GitHub to Render. Free hosting may take a few seconds to wake up on the first visit.</p>
+          <ul class="tags"><li>JavaScript</li><li>Tailwind CSS</li><li>Multiplayer</li><li>Render</li></ul>
+          <div class="links">
+            <a class="btn btn--solid mag" href="https://pickle-rush.onrender.com/" target="_blank" rel="noopener">Play Pickle Rush</a>
+            <a class="btn btn--ghost mag" href="https://github.com/JayxZqiox" target="_blank" rel="noopener">View code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="tilt reveal">
+          <div class="shot">
+            <span class="badge">Machine vision game</span>
+            <span class="hint">Add: images/projects/whack-me.jpg</span>
+            <img src="images/projects/whack-me.jpg" alt="Whack Me game: mole grid, hammer cursor and score panel" onerror="this.remove()">
+          </div>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <h3>Whack Me</h3>
+          <p class="what grad">Hand-tracking whack-a-mole</p>
+          <p class="desc">A whack-a-mole game you play with your bare hands. The camera tracks your hand and the hammer follows it, so you smash moles by moving in front of the screen. Finger gestures trigger power-ups: two fingers for Freeze and one finger for Blade Storm, with combos and a high score to chase.</p>
+          <p class="role">Built the hand detection, gesture controls and game logic.</p>
+          <ul class="tags"><li>Machine vision</li><li>Hand tracking</li><li>Camera input</li><li>Game dev</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="tilt reveal">
+          <div class="shot">
+            <span class="badge">Thesis</span>
+            <svg class="scene" viewBox="0 0 400 250" role="img" aria-label="Animation: a van driver's eyes close, the system detects drowsiness and sounds an emergency alert">
+              <defs><linearGradient id="dzsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#141948"/><stop offset="1" stop-color="#3A2D80"/></linearGradient></defs>
+              <rect width="400" height="250" fill="url(#dzsky)"/>
+              <circle cx="72" cy="98" r="12" fill="#F4F1FF" opacity=".85"/>
+              <g fill="#fff" opacity=".6"><circle cx="180" cy="30" r="1.4"/><circle cx="240" cy="18" r="1"/><circle cx="300" cy="62" r="1.2"/><circle cx="380" cy="90" r="1"/><circle cx="160" cy="80" r="1"/></g>
+              <g class="dz-posts">
+                <g fill="#5A5F8C"><rect x="20" y="148" width="4" height="42"/><rect x="120" y="148" width="4" height="42"/><rect x="220" y="148" width="4" height="42"/><rect x="320" y="148" width="4" height="42"/><rect x="420" y="148" width="4" height="42"/><rect x="520" y="148" width="4" height="42"/></g>
+                <g fill="#FFD36B" opacity=".75"><circle cx="22" cy="146" r="5"/><circle cx="122" cy="146" r="5"/><circle cx="222" cy="146" r="5"/><circle cx="322" cy="146" r="5"/><circle cx="422" cy="146" r="5"/><circle cx="522" cy="146" r="5"/></g>
+              </g>
+              <rect x="0" y="188" width="400" height="62" fill="#20244F"/>
+              <line class="dz-dash" x1="0" y1="222" x2="420" y2="222"/>
+              <g class="dz-car">
+                <g class="dz-bob">
+                  <polygon points="298,158 400,140 400,186" fill="#FFE9A8" opacity=".16"/>
+                  <path d="M118 178 V128 Q118 112 134 112 H252 Q264 112 272 122 L294 150 Q300 156 300 164 V178 Z" fill="#EEF0FF"/>
+                  <g fill="#8FD3FF" opacity=".6"><rect x="132" y="122" width="28" height="22" rx="4"/><rect x="166" y="122" width="28" height="22" rx="4"/><rect x="200" y="122" width="28" height="22" rx="4"/></g>
+                  <path d="M238 122 H258 Q263 122 266 126 L284 148 H238 Z" fill="#8FD3FF" opacity=".85"/>
+                  <g class="dz-head"><circle cx="252" cy="136" r="7" fill="#15163A"/><rect x="246" y="142" width="12" height="6" rx="2" fill="#15163A"/></g>
+                  <rect x="118" y="158" width="182" height="5" fill="#7C5CFF"/>
+                  <rect x="293" y="158" width="7" height="8" rx="2" fill="#FFE9A8"/>
+                  <rect x="118" y="148" width="5" height="11" rx="1" fill="#FF4D6D"/>
+                  <rect class="dz-hazard" x="196" y="104" width="22" height="8" rx="3"/>
+                </g>
+                <g class="dz-wheel"><circle cx="158" cy="180" r="16" fill="#15163A"/><circle cx="158" cy="180" r="7" fill="#C9CCF0"/><rect x="157" y="166" width="2" height="28" fill="#15163A"/></g>
+                <g class="dz-wheel"><circle cx="262" cy="180" r="16" fill="#15163A"/><circle cx="262" cy="180" r="7" fill="#C9CCF0"/><rect x="261" y="166" width="2" height="28" fill="#15163A"/></g>
+              </g>
+              <g class="dz-alert">
+                <circle class="dz-ring" cx="207" cy="108" r="18" fill="none" stroke="#FF4D6D" stroke-width="3"/>
+                <circle class="dz-ring" cx="207" cy="108" r="18" fill="none" stroke="#FF4D6D" stroke-width="3"/>
+                <path d="M200 24 L226 68 H174 Z" fill="#FF4D6D" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+                <text x="200" y="62" text-anchor="middle" fill="#fff" font-size="26">!</text>
+                <text x="166" y="52" text-anchor="end" fill="#fff" font-size="15">WAKE UP!</text>
+              </g>
+              <g transform="translate(256 14)">
+                <rect width="130" height="72" rx="12" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.22)"/>
+                <g class="dz-eye"><path d="M14 32 Q38 12 62 32 Q38 52 14 32 Z" fill="#fff"/><circle cx="38" cy="32" r="8" fill="#15163A"/><circle cx="41" cy="29" r="2.5" fill="#fff"/></g>
+                <text x="74" y="28" fill="#fff" opacity=".8" font-size="10">EAR</text>
+                <rect x="74" y="34" width="44" height="7" rx="3.5" fill="rgba(255,255,255,.18)"/>
+                <rect class="dz-ear" x="74" y="34" width="44" height="7" rx="3.5"/>
+                <text x="12" y="64" fill="#fff" opacity=".7" font-size="8.5">Driver monitor</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <h3>Driver Drowsiness Detection</h3>
+          <p class="what grad">Embedded AI on Raspberry Pi 5</p>
+          <p class="desc">An adaptive Eye Aspect Ratio (EAR) system that watches a driver's eyes and warns them when drowsiness sets in. Built for van drivers in Bohol.</p>
+          <p class="role">Co-author and developer in a team of six.</p>
+          <ul class="tags"><li>Raspberry Pi 5</li><li>Python</li><li>Computer vision</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="tilt reveal">
+          <div class="shot">
+            <span class="badge">Client project</span>
+            <span class="hint">Add: images/projects/pos-system.jpg</span>
+            <img src="images/projects/pos-system.jpg" alt="Chicken G POS terminal with menu items, stock levels and receipt panel" style="object-position:left top" onerror="this.remove()">
+          </div>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <h3>Chicken G POS System</h3>
+          <p class="what grad">Still in daily use</p>
+          <p class="desc">A point-of-sale system for Chicken G, a local food business. Staff clock in, ring up orders and check out, while live stock counts lock sold-out items automatically. It also has sales reports and inventory management.</p>
+          <p class="role">Sole developer, from requirements to deployment.</p>
+          <ul class="tags"><li>Full-stack</li><li>Inventory</li><li>Sales reports</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="tilt reveal">
+          <div class="shot">
+            <span class="badge">Mobile app</span>
+            <span class="hint">Add: images/projects/woundscan.jpg</span>
+            <img src="images/projects/woundscan.jpg" alt="WoundScan app classifying a burn and showing first-aid steps" style="object-position:center top" onerror="this.remove()">
+          </div>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <h3>WoundScan</h3>
+          <p class="what grad">Offline AI wound scanner</p>
+          <p class="desc">An Android app that identifies a wound from a photo or the camera (abrasion, bruise, cut, burn or venous wound) and shows its severity with step-by-step first aid, needed supplies and warning signs. The AI model runs entirely on the phone, so it works with no internet and images never leave the device.</p>
+          <ul class="tags"><li>Android APK</li><li>On-device AI</li><li>Image classification</li><li>Offline-first</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="tilt reveal">
+          <div class="shot">
+            <span class="badge">Audio AI</span>
+            <svg class="scene" viewBox="0 0 400 250" role="img" aria-label="Animation: glass, metal and plastic objects drop one by one; each impact sound is picked up over background noise and classified correctly">
+              <defs><linearGradient id="izbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#141948"/><stop offset="1" stop-color="#2A1F66"/></linearGradient></defs>
+              <rect width="400" height="250" fill="url(#izbg)"/>
+              <g class="iz-noisefx" fill="#fff" opacity=".35" font-size="11"><text x="30" y="70">~</text><text x="170" y="96">~</text><text x="48" y="140">~</text><text x="160" y="150">~</text></g>
+              <g class="iz-obj" style="animation-delay:0s"><path d="M92 118 H128 L123 182 H97 Z" fill="rgba(143,211,255,.3)" stroke="#8FD3FF" stroke-width="2.5" stroke-linejoin="round"/><path d="M99 130 L101 172" stroke="#fff" stroke-width="2" opacity=".6" stroke-linecap="round"/></g><g class="iz-obj" style="animation-delay:-6s"><rect x="96" y="126" width="28" height="56" rx="4" fill="#B8BCD6"/><rect x="96" y="134" width="28" height="4" fill="#8E93B8"/><rect x="96" y="170" width="28" height="4" fill="#8E93B8"/><rect x="102" y="140" width="4" height="26" rx="2" fill="#fff" opacity=".5"/></g><g class="iz-obj" style="animation-delay:-3s"><rect x="104" y="114" width="12" height="7" rx="2" fill="#fff"/><rect x="106" y="121" width="8" height="10" fill="#FF8FB0"/><rect x="97" y="131" width="26" height="51" rx="8" fill="#FF5C8A" opacity=".9"/><rect x="101" y="142" width="18" height="14" rx="2" fill="#fff" opacity=".35"/></g>
+              <circle class="iz-ring" cx="110" cy="184" r="16" fill="none" stroke="#8FD3FF" stroke-width="2.5" style="animation-delay:0s"/><circle class="iz-ring iz-ring2" cx="110" cy="184" r="16" fill="none" stroke="#8FD3FF" stroke-width="2" style="animation-delay:0s"/><circle class="iz-ring" cx="110" cy="184" r="16" fill="none" stroke="#C9CCF0" stroke-width="2.5" style="animation-delay:-6s"/><circle class="iz-ring iz-ring2" cx="110" cy="184" r="16" fill="none" stroke="#C9CCF0" stroke-width="2" style="animation-delay:-6s"/><circle class="iz-ring" cx="110" cy="184" r="16" fill="none" stroke="#FF5C8A" stroke-width="2.5" style="animation-delay:-3s"/><circle class="iz-ring iz-ring2" cx="110" cy="184" r="16" fill="none" stroke="#FF5C8A" stroke-width="2" style="animation-delay:-3s"/>
+              <rect x="34" y="186" width="152" height="7" rx="3" fill="#5A5F8C"/>
+              <rect x="44" y="193" width="6" height="34" fill="#3D4170"/><rect x="170" y="193" width="6" height="34" fill="#3D4170"/>
+              <g transform="translate(150 40)"><rect x="-6" y="0" width="12" height="20" rx="6" fill="#EEF0FF"/><path d="M-10 12 Q-10 26 0 26 Q10 26 10 12" fill="none" stroke="#EEF0FF" stroke-width="2"/><rect x="-1" y="26" width="2" height="7" fill="#EEF0FF"/></g>
+              <rect x="208" y="22" width="180" height="206" rx="14" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.2)"/>
+              <circle class="iz-live" cx="226" cy="44" r="4.5" fill="#FF4D6D"/>
+              <text x="238" y="48" fill="#fff" font-size="11">Listening</text>
+              <rect x="296" y="34" width="82" height="18" rx="9" fill="rgba(59,227,139,.18)"/>
+              <text x="337" y="46.5" text-anchor="middle" fill="#3BE38B" font-size="8.5">Noise filter on</text>
+              <line x1="222" y1="104" x2="374" y2="104" stroke="rgba(255,255,255,.12)"/>
+              <path class="iz-noise" d="M222,102.2 L225,101.2 L228,103.3 L231,101.6 L234,101.0 L237,103.3 L240,106.9 L243,106.1 L246,105.9 L249,102.1 L252,104.3 L255,102.4 L258,101.7 L261,101.2 L264,102.0 L267,107.0 L270,106.3 L273,106.1 L276,106.1 L279,101.9 L282,102.7 L285,104.9 L288,105.6 L291,106.5 L294,106.7 L297,101.1 L300,104.7 L303,105.2 L306,104.0 L309,101.7 L312,103.8 L315,101.1 L318,107.0 L321,106.6 L324,104.3 L327,102.6 L330,106.9 L333,104.5 L336,106.7 L339,106.4 L342,104.1 L345,103.4 L348,104.7 L351,103.5 L354,101.6 L357,102.6 L360,106.2 L363,100.8 L366,100.8 L369,104.9 L372,102.5" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="1.3"/>
+              <path class="iz-wave" d="M222,104.0 L224,104.0 L226,104.0 L228,104.0 L230,104.0 L232,104.0 L234,77.4 L236,87.7 L238,117.5 L240,126.6 L242,105.9 L244,85.3 L246,90.8 L248,112.5 L250,120.8 L252,106.8 L254,91.0 L256,93.6 L258,109.1 L260,116.3 L262,107.0 L264,95.0 L266,95.8 L268,106.9 L270,113.0 L272,106.9 L274,97.9 L276,97.7 L278,105.5 L280,110.5 L282,106.6 L284,99.9 L286,99.2 L288,104.7 L290,108.7 L292,106.3 L294,101.3 L296,100.3 L298,104.2 L300,107.3 L302,105.9 L304,102.2 L306,101.2 L308,103.9 L310,106.4 L312,105.5 L314,102.9 L316,101.9 L318,103.7 L320,105.6 L322,105.2 L324,103.3 L326,102.5 L328,103.7 L330,105.1 L332,105.0 L334,103.6 L336,102.9 L338,103.7 L340,104.8 L342,104.8 L344,103.8 L346,103.2 L348,103.7 L350,104.5 L352,104.6 L354,103.9 L356,103.4 L358,103.7 L360,104.4 L362,104.4 L364,104.0 L366,103.6 L368,103.8 L370,104.2 L372,104.3 L374,104.0" pathLength="1" fill="none" stroke="#8FD3FF" stroke-width="2.2" stroke-linejoin="round" style="animation-delay:0s"/><path class="iz-wave" d="M222,104.0 L224,104.0 L226,104.0 L228,104.0 L230,104.0 L232,104.0 L234,83.0 L236,75.3 L238,84.8 L240,105.2 L242,124.0 L244,130.1 L246,120.7 L248,101.8 L250,85.0 L252,80.2 L254,89.6 L256,107.0 L258,121.9 L260,125.6 L262,116.4 L264,100.3 L266,87.1 L268,84.4 L270,93.4 L272,108.2 L274,119.9 L276,121.7 L278,113.0 L280,99.4 L282,89.1 L284,88.0 L286,96.4 L288,108.9 L290,118.0 L292,118.4 L294,110.4 L296,98.9 L298,91.0 L300,91.0 L302,98.7 L304,109.2 L306,116.1 L308,115.6 L310,108.3 L312,98.8 L314,92.7 L316,93.6 L318,100.5 L320,109.2 L322,114.4 L324,113.3 L326,106.7 L328,98.8 L330,94.3 L332,95.7 L334,101.9 L336,109.1 L338,112.9 L340,111.3 L342,105.5 L344,99.1 L346,95.8 L348,97.5 L350,102.9 L352,108.8 L354,111.5 L356,109.7 L358,104.6 L360,99.4 L362,97.1 L364,98.9 L366,103.7 L368,108.4 L370,110.3 L372,108.4 L374,104.0" pathLength="1" fill="none" stroke="#C9CCF0" stroke-width="2.2" stroke-linejoin="round" style="animation-delay:-6s"/><path class="iz-wave" d="M222,104.0 L224,104.0 L226,104.0 L228,104.0 L230,104.0 L232,104.0 L234,94.6 L236,88.0 L238,84.5 L240,84.0 L242,86.0 L244,89.9 L246,94.7 L248,99.8 L250,104.5 L252,108.3 L254,110.9 L256,112.2 L258,112.3 L260,111.3 L262,109.7 L264,107.6 L266,105.5 L268,103.6 L270,102.0 L272,101.0 L274,100.5 L276,100.6 L278,101.0 L280,101.7 L282,102.6 L284,103.5 L286,104.3 L288,104.9 L290,105.3 L292,105.4 L294,105.4 L296,105.2 L298,104.9 L300,104.5 L302,104.2 L304,103.8 L306,103.6 L308,103.5 L310,103.4 L312,103.4 L314,103.5 L316,103.6 L318,103.8 L320,103.9 L322,104.1 L324,104.2 L326,104.2 L328,104.3 L330,104.2 L332,104.2 L334,104.1 L336,104.1 L338,104.0 L340,104.0 L342,103.9 L344,103.9 L346,103.9 L348,103.9 L350,103.9 L352,103.9 L354,104.0 L356,104.0 L358,104.0 L360,104.0 L362,104.0 L364,104.0 L366,104.0 L368,104.0 L370,104.0 L372,104.0 L374,104.0" pathLength="1" fill="none" stroke="#FF5C8A" stroke-width="2.2" stroke-linejoin="round" style="animation-delay:-3s"/>
+              <text x="222" y="146" fill="#fff" opacity=".55" font-size="9">Detected material</text>
+              <g class="iz-result" style="animation-delay:0s"><text x="222" y="170" fill="#fff" font-size="15">Glass</text><text x="374" y="170" text-anchor="end" fill="#8FD3FF" font-size="13">94%</text><rect x="222" y="178" width="152" height="6" rx="3" fill="rgba(255,255,255,.15)"/><rect class="iz-bar" x="222" y="178" width="143" height="6" rx="3" fill="#8FD3FF" style="animation-delay:0s"/></g><g class="iz-result" style="animation-delay:-6s"><text x="222" y="170" fill="#fff" font-size="15">Metal</text><text x="374" y="170" text-anchor="end" fill="#C9CCF0" font-size="13">97%</text><rect x="222" y="178" width="152" height="6" rx="3" fill="rgba(255,255,255,.15)"/><rect class="iz-bar" x="222" y="178" width="147" height="6" rx="3" fill="#C9CCF0" style="animation-delay:-6s"/></g><g class="iz-result" style="animation-delay:-3s"><text x="222" y="170" fill="#fff" font-size="15">Plastic</text><text x="374" y="170" text-anchor="end" fill="#FF5C8A" font-size="13">91%</text><rect x="222" y="178" width="152" height="6" rx="3" fill="rgba(255,255,255,.15)"/><rect class="iz-bar" x="222" y="178" width="138" height="6" rx="3" fill="#FF5C8A" style="animation-delay:-3s"/></g>
+            </svg>
+          </div>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <h3>ImpactID</h3>
+          <p class="what grad">Noise-resistant sound classifier</p>
+          <p class="desc">Tells glass, metal and plastic apart from the sound of an impact, even with background noise. It cleans the audio with a bandpass filter and spectral noise subtraction, measures features like spectral centroid and decay rate, then classifies them with a k-NN model written from scratch.</p>
+          <p class="role">Solo project for Data Communications.</p>
+          <ul class="tags"><li>Python</li><li>Signal processing</li><li>k-NN</li></ul>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="tilt reveal">
+          <div class="shot">
+            <span class="badge">Prototype</span>
+            <span class="hint">Add: images/projects/smart-refill.jpg</span>
+            <img src="images/projects/smart-refill.jpg" alt="Smart refill module prototype with labeled tank, sensors, Arduino and pump" onerror="this.remove()">
+          </div>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <h3>Smart Refill Module</h3>
+          <p class="what grad">Embedded system in assembly</p>
+          <p class="desc">An Arduino add-on for water vending machines. It refills the tank automatically, stops before overflowing, dispenses on coin insert, and blocks sales when the tank is too low so no one loses their coin.</p>
+          <ul class="tags"><li>Arduino Uno</li><li>AVR Assembly</li><li>Water level sensors</li><li>Pump control</li></ul>
+        </div>
+      </article>
+    </div>
+
+    <!-- MORE -->
+    <div class="more">
+      <div class="more__head reveal">
+        <h3>More projects</h3>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="hardware" aria-pressed="false">Hardware</button>
+          <button type="button" data-filter="software" aria-pressed="false">Software</button>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card reveal" data-cat="hardware">
+          <div class="tilt"><div class="shot"><span class="hint">Add: images/projects/sumobra.jpg</span><img src="images/projects/sumobra.jpg" alt="Sumobra sumobot" onerror="this.remove()"></div></div>
+          <h4>Sumobra</h4>
+          <p>A sumobot built to find and push opponents out of the ring.</p>
+          <a class="tlink" href="https://youtu.be/Z3dgau69tX0" target="_blank" rel="noopener">Watch demo</a>
+        </article>
+        <article class="card reveal" data-cat="hardware">
+          <div class="tilt"><div class="shot"><span class="hint">Add: images/projects/pcb-design.jpg</span><img src="images/projects/pcb-design.jpg" alt="Hand-made PCB with seven-segment displays, ICs, LEDs and DIP switch" style="object-position:center 40%" onerror="this.remove()"></div></div>
+          <h4>PCB Design</h4>
+          <p>A custom board with seven-segment displays, logic ICs, LEDs and a DIP switch, taken from schematic to fabrication.</p>
+        </article>
+        <article class="card reveal" data-cat="software">
+          <div class="tilt"><div class="shot"><span class="hint">Add: images/projects/pos-cpp.jpg</span><img src="images/projects/pos-cpp.jpg" alt="Console output of a C++ point-of-sale program" style="object-position:left top" onerror="this.remove()"></div></div>
+          <h4>POS in C++</h4>
+          <p>My first-year console point-of-sale program for product lists, sales and totals.</p>
+        </article>
+        <article class="card reveal" data-cat="software">
+          <div class="tilt"><div class="shot"><span class="hint">Add: images/projects/foodshare.jpg</span><img src="images/projects/foodshare.jpg" alt="FoodShare recipe search page" style="object-position:center top" onerror="this.remove()"></div></div>
+          <h4>FoodShare</h4>
+          <p>A Java web app for finding, adding and rating food recipes.</p>
+        </article>
+        <article class="card reveal" data-cat="software">
+          <div class="tilt"><div class="shot"><span class="hint">Add: images/projects/roots-branches.jpg</span><img src="images/projects/roots-branches.jpg" alt="Roots and Branches dashboard" style="object-position:center 30%" onerror="this.remove()"></div></div>
+          <h4>Roots &amp; Branches</h4>
+          <p>A Java web app for building a family tree, managing members and tracking milestones.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="sec" id="experience">
+  <div class="wrap">
+    <h2 class="sec__title">Experience</h2>
+    <ol class="timeline" id="timeline">
+      <li class="reveal">
+        <h3>IT Support Intern, Sagility</h3>
+        <p class="meta">On-the-job training, 240 hours</p>
+        <p>Handled technical support and system troubleshooting, configured workstations, and managed hardware and software for daily operations.</p>
+      </li>
+      <li class="reveal">
+        <h3>Freelance Developer, POS System</h3>
+        <p class="meta">Client project for a small food business</p>
+        <p>Designed and built a full-stack point-of-sale system that the business still uses every day.</p>
+      </li>
+      <li class="reveal">
+        <h3>PCB Design Seminar Facilitator &amp; Speaker</h3>
+        <p class="meta">Student-led technical seminars</p>
+        <p>Taught schematic creation, layout and routing, and board fabrication to fellow engineering students.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="sec" id="skills">
+  <div class="wrap">
+    <h2 class="sec__title">Skills</h2>
+    <div class="skills">
+      <div class="skill reveal">
+        <h3>Hardware &amp; embedded</h3>
+        <ul><li>Arduino</li><li>AVR Assembly</li><li>Raspberry Pi</li><li>PCB design</li><li>Sensors</li></ul>
+      </div>
+      <div class="skill reveal" style="--d:.1s">
+        <h3>Code &amp; web</h3>
+        <ul><li>C++</li><li>Python</li><li>Java</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>Tailwind</li><li>PHP</li><li>MATLAB</li></ul>
+      </div>
+      <div class="skill reveal" style="--d:.2s">
+        <h3>IT &amp; tools</h3>
+        <ul><li>Troubleshooting</li><li>Workstation setup</li><li>Git &amp; GitHub</li><li>Render</li><li>GitHub Pages</li></ul>
+      </div>
+    </div>
+    <div class="edu">
+      <!-- REPLACE: update school and years if needed -->
+      <div class="reveal"><b>BS Computer Engineering</b><span>University of Bohol, 2023 to present</span></div>
+      <div class="reveal" style="--d:.1s"><b>Senior High, Design in Industrial Arts</b><span>Immaculata High School of Baclayon</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <h2 class="contact__big sec__title" style="margin-bottom:0">Let's build something</h2>
+    <p class="reveal">Open to roles in IT support, embedded systems and web development, plus freelance projects.</p>
+    <div class="actions reveal">
+      <a class="btn btn--solid mag" href="mailto:jaycurayag12@gmail.com">jaycurayag12@gmail.com</a>
+      <a class="btn btn--ghost mag" href="tel:+639941194857">+63 994 119 4857</a>
+    </div>
+    <div class="contact__alt reveal">
+      <a class="tlink" href="https://github.com/JayxZqiox" target="_blank" rel="noopener">GitHub</a>
+      <!-- REPLACE: add your LinkedIn link, or delete this line -->
+      <a class="tlink" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="tlink" href="https://www.facebook.com/jay.jay.1z" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© <span id="yr">2026</span> Jay Curayag</span><span>Baclayon, Bohol, Philippines</span></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
